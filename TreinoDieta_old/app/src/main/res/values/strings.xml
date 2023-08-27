@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Treino&amp;Dieta</string>
+    <string name="labelMedidasPessoa">Medidas Pessoa</string>
+    <string name="labelContadorCalorias">Contador de Calorias</string>
+    <string name="labelCalculoImc">Calculo Imc</string>
+</resources>

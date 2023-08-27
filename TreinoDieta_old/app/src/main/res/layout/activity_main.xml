@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgViewLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/logo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutContadorCalorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutLogo">
+
+            <Button
+                android:id="@+id/btnCalcular"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:insetLeft="8dp"
+                android:insetRight="8dp"
+                android:text="@string/labelContadorCalorias" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCalculoImc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutContadorCalorias">
+
+            <Button
+                android:id="@+id/btnCalculoImc"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:insetLeft="8dp"
+                android:insetRight="8dp"
+                android:text="@string/labelCalculoImc" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutMedidas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCalculoImc">
+
+            <Button
+                android:id="@+id/btnMedidas"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:insetLeft="8dp"
+                android:insetRight="8dp"
+                android:text="@string/labelMedidasPessoa" />
+
+
+        </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
