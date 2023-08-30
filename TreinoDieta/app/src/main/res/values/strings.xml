@@ -9,7 +9,7 @@
     <string name="btnCalcular">Calcular</string>
 
     <!--MainActivity-->
-    <string name="labelMedidasPessoa">Medidas Pessoa</string>
+    <string name="labelMedidasPessoa">Medidas Corporal</string>
     <string name="labelContadorCalorias">Contador de Calorias</string>
     <string name="labelCalculoImc">Cálculo IMC</string>
 
@@ -29,5 +29,11 @@
     <string name="imc">IMC:</string>
     <string name="peso">Peso:</string>
     <string name="altura">Altura:</string>
+
+    <!--Tela Contador Calorias-->
+    <string name="contadorCalorias">Contador Calorias</string>
+    <string name="caloriasDiarias">Calorias diárias:</string>
+    <string name="caloriasConsumidas">Calorias consumidas:</string>
+    <string name="caloriasDisponiveis">Calorias disponíveis:</string>
 
 </resources>
