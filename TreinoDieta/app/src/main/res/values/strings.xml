@@ -1,6 +1,26 @@
 <resources>
+
     <string name="app_name">Treino&amp;Dieta</string>
+
+    <!--Botões-->
+    <string name="btnVoltar">Voltar</string>
+    <string name="btnSalvar">Salvar</string>
+
+    <!--MainActivity-->
     <string name="labelMedidasPessoa">Medidas Pessoa</string>
     <string name="labelContadorCalorias">Contador de Calorias</string>
     <string name="labelCalculoImc">Calculo Imc</string>
+
+    <!--Tela de medidas-->
+    <string name="antebracoE">Antebraço(E):</string>
+    <string name="antebracoD">Antebraço(D):</string>
+    <string name="bracoE">Braço(E):</string>
+    <string name="bracoD">Braço(D):</string>
+    <string name="cintura">Cintura:</string>
+    <string name="quadril">Quadril:</string>
+    <string name="pernaE">Perna(E):</string>
+    <string name="pernaD">Perna(D):</string>
+    <string name="peito">Peito:</string>
+    <string name="medidasCorporal">Medidas Corporal</string>
+
 </resources>

@@ -2,15 +2,307 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MedidasPessoaActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayoutTitulo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="medidas pessoas"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="201dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtMedidasCorporal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medidasCorporal"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAntebracoD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTitulo">
+
+        <TextView
+            android:id="@+id/txtAntebracoD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/antebracoD"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edtAntebracoD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAntebracoE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutAntebracoD">
+
+        <TextView
+            android:id="@+id/txtAntebracoE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/antebracoE"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edtAntebracoE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutBracoD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutAntebracoE">
+
+        <TextView
+            android:id="@+id/txtBracoD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bracoD"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edtBracoD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutBracoE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutBracoD">
+
+        <TextView
+            android:id="@+id/txtBracoE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bracoE"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edtBracoE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCintura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutBracoE">
+
+        <TextView
+            android:id="@+id/txtCintura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cintura"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edtCintura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutQuadril"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCintura">
+
+        <TextView
+            android:id="@+id/txtQuadril"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quadril"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edtQuadril"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPernaD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutQuadril">
+
+        <TextView
+            android:id="@+id/txtPernaD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pernaD"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edtPernaD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPernaE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPernaD">
+
+        <TextView
+            android:id="@+id/txtPernaE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pernaE"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edtPernaE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPeito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPernaE">
+
+        <TextView
+            android:id="@+id/txtPeito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/peito"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edtPeito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutBotoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPeito">
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="8dp"
+            android:insetRight="8dp"
+            android:text="@string/btnVoltar" />
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="8dp"
+            android:insetRight="8dp"
+            android:text="@string/btnSalvar" />
+    </LinearLayout>
+
+
+
+
 </android.support.constraint.ConstraintLayout>
