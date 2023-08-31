@@ -30,5 +30,7 @@ public class ContadorCaloriasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contador_calorias);
+
+        setTitle(R.string.contadorCalorias);
     }
 }

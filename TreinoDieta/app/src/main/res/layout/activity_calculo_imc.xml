@@ -24,28 +24,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayoutTitulo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutImagem">
-
-        <TextView
-            android:id="@+id/txtCalculoImcTitulo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/labelCalculoImc"
-            android:gravity="center"
-            android:textSize="30sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/linearLayoutPesoCorporal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,7 +33,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTitulo">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutImagem">
 
         <TextView
             android:id="@+id/txtPesoCorporal"

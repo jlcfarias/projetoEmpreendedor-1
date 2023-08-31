@@ -41,6 +41,8 @@ public class CalculoImcActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculo_imc);
 
+        setTitle(R.string.labelCalculoImc);
+
         editPeso = findViewById(R.id.edtPesoCorporal);
         editAltura = findViewById(R.id.edtAltura);
         txtResultado = findViewById(R.id.txtResultado);

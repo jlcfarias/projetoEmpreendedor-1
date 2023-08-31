@@ -42,6 +42,8 @@ public class MedidasPessoaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medidas_pessoa);
 
+        setTitle(R.string.medidasCorporal);
+
         salvar = findViewById(R.id.btnSalvar);
 
         medidasCorporalHelper = new MedidasCorporalHelper(this);
