@@ -3,6 +3,9 @@ package com.larissa.treinodieta;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -16,6 +19,23 @@ public class MedidasPessoaActivity extends AppCompatActivity {
     private MedidasCorporalHelper medidasCorporalHelper;
 
     private Button salvar;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mMenuInflater =  getMenuInflater();
+        mMenuInflater.inflate(R.menu.voltar, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.menu_voltar) {
+            Intent i = new Intent(MedidasPessoaActivity.this, MainActivity.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
