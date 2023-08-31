@@ -297,7 +297,7 @@
             android:layout_weight="1"
             android:insetLeft="8dp"
             android:insetRight="8dp"
-            android:text="@string/btnSalvar" />
+            android:text="@string/btnSalvar"/>
     </LinearLayout>
 
 

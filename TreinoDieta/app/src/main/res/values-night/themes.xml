@@ -2,9 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.TreinoDieta" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
-        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FA5A25</item>
+        <item name="colorPrimaryDark">#F00000</item>
+        <item name="colorAccent">#F7200C</item>
     </style>
 </resources>
