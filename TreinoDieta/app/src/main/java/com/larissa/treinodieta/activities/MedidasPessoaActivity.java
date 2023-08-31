@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.larissa.treinodieta.R;
 import com.larissa.treinodieta.dao.MedidasCorporalDao;
 import com.larissa.treinodieta.helpers.MedidasCorporalHelper;
-import com.larissa.treinodieta.model.MedidasCorporal;
+import com.larissa.treinodieta.models.MedidasCorporal;
 
 public class MedidasPessoaActivity extends AppCompatActivity {
 

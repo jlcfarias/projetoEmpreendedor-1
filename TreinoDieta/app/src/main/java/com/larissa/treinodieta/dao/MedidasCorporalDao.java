@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.larissa.treinodieta.model.MedidasCorporal;
+import com.larissa.treinodieta.models.MedidasCorporal;
 
 public class MedidasCorporalDao extends SQLiteOpenHelper {
 

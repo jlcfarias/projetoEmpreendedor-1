@@ -1,4 +1,4 @@
-package com.larissa.treinodieta.model;
+package com.larissa.treinodieta.models;
 
 import android.widget.EditText;
 
