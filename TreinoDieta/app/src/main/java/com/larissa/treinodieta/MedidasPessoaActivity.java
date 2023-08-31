@@ -46,24 +46,21 @@ public class MedidasPessoaActivity extends AppCompatActivity {
 
         medidasCorporalHelper = new MedidasCorporalHelper(this);
 
-        Intent mIntent = getIntent();
-        MedidasCorporal medidasCorporal = (MedidasCorporal) mIntent.getSerializableExtra("MedidasCorporal");
-        if (medidasCorporal != null){
-            medidasCorporalHelper.preencherCampos(medidasCorporal);
+        MedidasCorporalDao dao = new MedidasCorporalDao(this);
+
+        MedidasCorporal ultimaMedida = dao.burcarMedidasCorporal();
+
+        if (ultimaMedida != null){
+            medidasCorporalHelper.preencherCampos(ultimaMedida);
         }
 
-        MedidasCorporalDao dao = new MedidasCorporalDao(this);
         salvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 MedidasCorporal medidas = medidasCorporalHelper.getMedidasCorporal();
-
-                if (medidas.getId() == null){
                     dao.inserirMedidasCorporal(medidas);
                     dao.close();
-                    Toast.makeText(getApplicationContext(), "Salvo com Sucesso!" , Toast.LENGTH_SHORT).show();
-
-                }
+                    Toast.makeText(getApplicationContext(), R.string.salvo_sucesso , Toast.LENGTH_SHORT).show();
             }
         });
     }

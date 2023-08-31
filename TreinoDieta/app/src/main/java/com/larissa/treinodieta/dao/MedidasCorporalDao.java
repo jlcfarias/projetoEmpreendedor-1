@@ -8,9 +8,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.larissa.treinodieta.model.MedidasCorporal;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MedidasCorporalDao extends SQLiteOpenHelper {
 
     public MedidasCorporalDao( Context context) {
@@ -69,28 +66,26 @@ public class MedidasCorporalDao extends SQLiteOpenHelper {
     }
 
 
-    public List<MedidasCorporal> burcarMedidasCorporal() {
-        String banco = "SELECT * FROM MedidasCorporal;";
+    public MedidasCorporal burcarMedidasCorporal() {
+        String banco = "SELECT * FROM MedidasCorporal WHERE id = (SELECT MAX(id) FROM MedidasCorporal);";
         SQLiteDatabase mSQLiteDatabase = getReadableDatabase();
         Cursor cursor = mSQLiteDatabase.rawQuery(banco, null);
 
-        List<MedidasCorporal> medidas = new ArrayList<MedidasCorporal>();
+        MedidasCorporal medidas = new MedidasCorporal();
 
         while (cursor.moveToNext()){
-            MedidasCorporal medidasCorporal = new MedidasCorporal();
 
-            medidasCorporal.setId(cursor.getLong(cursor.getColumnIndexOrThrow("id")));
-            medidasCorporal.setAntebracoE(cursor.getString(cursor.getColumnIndexOrThrow("antebracoE")));
-            medidasCorporal.setAntebracoD(cursor.getString(cursor.getColumnIndexOrThrow("antebracoD")));
-            medidasCorporal.setBracoE(cursor.getString(cursor.getColumnIndexOrThrow("bracoE")));
-            medidasCorporal.setBracoD(cursor.getString(cursor.getColumnIndexOrThrow("bracoD")));
-            medidasCorporal.setCintura(cursor.getString(cursor.getColumnIndexOrThrow("cintura")));
-            medidasCorporal.setQuadril(cursor.getString(cursor.getColumnIndexOrThrow("quadril")));
-            medidasCorporal.setPernaE(cursor.getString(cursor.getColumnIndexOrThrow("pernaE")));
-            medidasCorporal.setPernaD(cursor.getString(cursor.getColumnIndexOrThrow("pernaD")));
-            medidasCorporal.setPeito(cursor.getString(cursor.getColumnIndexOrThrow("peito")));
+            medidas.setId(cursor.getLong(cursor.getColumnIndexOrThrow("id")));
+            medidas.setAntebracoE(cursor.getString(cursor.getColumnIndexOrThrow("antebracoE")));
+            medidas.setAntebracoD(cursor.getString(cursor.getColumnIndexOrThrow("antebracoD")));
+            medidas.setBracoE(cursor.getString(cursor.getColumnIndexOrThrow("bracoE")));
+            medidas.setBracoD(cursor.getString(cursor.getColumnIndexOrThrow("bracoD")));
+            medidas.setCintura(cursor.getString(cursor.getColumnIndexOrThrow("cintura")));
+            medidas.setQuadril(cursor.getString(cursor.getColumnIndexOrThrow("quadril")));
+            medidas.setPernaD(cursor.getString(cursor.getColumnIndexOrThrow("pernaD")));
+            medidas.setPernaE(cursor.getString(cursor.getColumnIndexOrThrow("pernaE")));
+            medidas.setPeito(cursor.getString(cursor.getColumnIndexOrThrow("peito")));
 
-            medidas.add(medidasCorporal);
         }
         cursor.close();
 
