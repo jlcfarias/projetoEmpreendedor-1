@@ -2,7 +2,7 @@ package com.larissa.treinodieta.helpers;
 
 import android.widget.EditText;
 
-import com.larissa.treinodieta.MedidasPessoaActivity;
+import com.larissa.treinodieta.activities.MedidasPessoaActivity;
 import com.larissa.treinodieta.R;
 import com.larissa.treinodieta.model.MedidasCorporal;
 

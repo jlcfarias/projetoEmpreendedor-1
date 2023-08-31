@@ -1,4 +1,4 @@
-package com.larissa.treinodieta;
+package com.larissa.treinodieta.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.larissa.treinodieta.R;
 import com.larissa.treinodieta.dao.MedidasCorporalDao;
 import com.larissa.treinodieta.helpers.MedidasCorporalHelper;
 import com.larissa.treinodieta.model.MedidasCorporal;
@@ -41,7 +42,6 @@ public class MedidasPessoaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medidas_pessoa);
-
         setTitle(R.string.medidasCorporal);
 
         salvar = findViewById(R.id.btnSalvar);
@@ -62,7 +62,7 @@ public class MedidasPessoaActivity extends AppCompatActivity {
                 MedidasCorporal medidas = medidasCorporalHelper.getMedidasCorporal();
                     dao.inserirMedidasCorporal(medidas);
                     dao.close();
-                    Toast.makeText(getApplicationContext(), R.string.salvo_sucesso , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.salvoSucesso , Toast.LENGTH_SHORT).show();
             }
         });
     }

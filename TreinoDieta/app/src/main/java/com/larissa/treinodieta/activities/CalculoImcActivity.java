@@ -1,4 +1,4 @@
-package com.larissa.treinodieta;
+package com.larissa.treinodieta.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.larissa.treinodieta.R;
 
 public class CalculoImcActivity extends AppCompatActivity {
 
@@ -40,7 +42,6 @@ public class CalculoImcActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculo_imc);
-
         setTitle(R.string.labelCalculoImc);
 
         editPeso = findViewById(R.id.edtPesoCorporal);

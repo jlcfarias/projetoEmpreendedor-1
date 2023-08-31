@@ -37,7 +37,9 @@
     <string name="caloriasDisponiveis">Calorias disponíveis:</string>
 
 
-    <string name="salvo_sucesso">Salvo com Sucesso!</string>
+    <string name="salvoSucesso">Salvo com Sucesso!</string>
+    <string name="treinoDieta">Treino e Dieta</string>
+
 
 
 

@@ -1,4 +1,4 @@
-package com.larissa.treinodieta;
+package com.larissa.treinodieta.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import com.larissa.treinodieta.R;
 
 public class ContadorCaloriasActivity extends AppCompatActivity {
 
@@ -30,7 +32,6 @@ public class ContadorCaloriasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contador_calorias);
-
         setTitle(R.string.contadorCalorias);
     }
 }
