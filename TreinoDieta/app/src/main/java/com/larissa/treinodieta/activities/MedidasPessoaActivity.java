@@ -107,42 +107,42 @@ public class MedidasPessoaActivity extends AppCompatActivity {
 
         if (validaFieldAntebracoE.equals("")){
             verificarCamposPreenchidos = true;
-            antebracoE.setError("Preencha o campo Antebraço Esquerdo");
+            antebracoE.setError("Preencha o campo antebraço esquerdo");
         }
 
         if (validaFieldAntebracoD.equals("")){
             verificarCamposPreenchidos = true;
-            antebracoD.setError("Preencha o campo Antebraço Direito");
+            antebracoD.setError("Preencha o campo antebraço direito");
         }
 
         if (validaFieldBracoE.equals("")){
             verificarCamposPreenchidos = true;
-            bracoE.setError("Preencha o campo Braço Esquerdo");
+            bracoE.setError("Preencha o campo braço esquerdo");
         }
 
         if (validaFieldBracoD.equals("")){
             verificarCamposPreenchidos = true;
-            bracoD.setError("Preencha o campo Braço Direito");
+            bracoD.setError("Preencha o campo braço direito");
         }
 
         if (validaFieldCintura.equals("")){
             verificarCamposPreenchidos = true;
-            cintura.setError("Preencha o campo Cintura");
+            cintura.setError("Preencha o campo cintura");
         }
 
         if (validaFieldQuadril.equals("")){
             verificarCamposPreenchidos = true;
-            quadril.setError("Preencha o campo Quadril");
+            quadril.setError("Preencha o campo quadril");
         }
 
         if (validaFieldPernaE.equals("")){
             verificarCamposPreenchidos = true;
-            pernaE.setError("Preencha o campo perna Esqueda");
+            pernaE.setError("Preencha o campo perna wsqueda");
         }
 
         if (validaFieldPernaD.equals("")){
             verificarCamposPreenchidos = true;
-            pernaD.setError("Preencha o campo  perna Direita");
+            pernaD.setError("Preencha o campo perna direita");
         }
 
         if (validaFieldPeito.equals("")){
