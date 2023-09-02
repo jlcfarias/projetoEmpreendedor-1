@@ -65,29 +65,37 @@ public class CalculoImcActivity extends AppCompatActivity {
     }
 
     private void calcular(){
+        if (!editPeso.getText().toString().isEmpty() && !editAltura.getText().toString().isEmpty()) {
+            float peso = Float.parseFloat(editPeso.getText().toString());
+            float altura = Float.parseFloat(editAltura.getText().toString());
+            float res = peso / (altura * altura);
 
-        float peso = Float.parseFloat(editPeso.getText().toString());
-        float altura = Float.parseFloat(editAltura.getText().toString());
-        float res = peso / (altura * altura);
+            //  String resultado = Float.toString(res);
+            String imc;
 
-      //  String resultado = Float.toString(res);
-        String imc;
-
-        if (res < 18.5){
-            imc = "Muito a baixo do normal";
-        } else if (res < 24.9) {
-            imc = "Normal";
-        } else if (res <29.9) {
-            imc = "Sobrepeso";
+            if (res < 18.5) {
+                imc = "Muito a baixo do normal";
+            } else if (res < 24.9) {
+                imc = "Normal";
+            } else if (res < 29.9) {
+                imc = "Sobrepeso";
+            } else {
+                imc = "Obesidade";
+            }
+            txtResultado.setText("IMC: " + String.format("%.2f", res) + " " + " - " + imc);
         }else {
-            imc = "Obesidade";
+            AlertDialog.Builder msgAlert = new AlertDialog.Builder(this);
+            msgAlert.setMessage("Peso e altura são campos obrigatórios!");
+            msgAlert.setNeutralButton("ok", null);
+            msgAlert.show();
         }
-        txtResultado.setText("IMC: " + String.format("%.2f", res ) + " " + " - " + imc);
     }
 
     private void limpar(){
         editPeso.setText("");
         editAltura.setText("");
+        txtResultado.setText("");
+
     }
 
 }
