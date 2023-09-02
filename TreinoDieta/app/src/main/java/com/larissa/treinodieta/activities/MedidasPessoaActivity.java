@@ -71,7 +71,7 @@ public class MedidasPessoaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 MedidasCorporal medidas = medidasCorporalHelper.getMedidasCorporal();
-                if (!validarCampos()){{
+                if (!validaCamposObrigatorios()){{
                     dao.inserirMedidasCorporal(medidas);
                     dao.close();
                     Toast.makeText(getApplicationContext(), R.string.salvoSucesso , Toast.LENGTH_SHORT).show();
@@ -80,7 +80,7 @@ public class MedidasPessoaActivity extends AppCompatActivity {
         });
     }
 
-    public boolean validarCampos(){
+    public boolean validaCamposObrigatorios(){
 
         antebracoE = (EditText) findViewById(R.id.edtAntebracoE);
         antebracoD = (EditText) findViewById(R.id.edtAntebracoD);

@@ -66,28 +66,51 @@ public class CalculoImcActivity extends AppCompatActivity {
 
     private void calcular(){
 
-        float peso = Float.parseFloat(editPeso.getText().toString());
-        float altura = Float.parseFloat(editAltura.getText().toString());
-        float res = peso / (altura * altura);
+        if(!validaCamposObrigatorios()){
+            float peso = Float.parseFloat(editPeso.getText().toString());
+            float altura = Float.parseFloat(editAltura.getText().toString());
+            float res = peso / (altura * altura);
 
-      //  String resultado = Float.toString(res);
-        String imc;
+            String imc;
 
-        if (res < 18.5){
-            imc = "Muito a baixo do normal";
-        } else if (res < 24.9) {
-            imc = "Normal";
-        } else if (res <29.9) {
-            imc = "Sobrepeso";
-        }else {
-            imc = "Obesidade";
+            if (res < 18.5){
+                imc = "Muito a baixo do normal";
+            } else if (res < 24.9) {
+                imc = "Normal";
+            } else if (res <29.9) {
+                imc = "Sobrepeso";
+            }else {
+                imc = "Obesidade";
+            }
+            txtResultado.setText("IMC: " + String.format("%.2f", res ) + " " + " - " + imc);
         }
-        txtResultado.setText("IMC: " + String.format("%.2f", res ) + " " + " - " + imc);
+
     }
 
     private void limpar(){
         editPeso.setText("");
         editAltura.setText("");
+        txtResultado.setText("");
+    }
+
+    public boolean validaCamposObrigatorios(){
+
+        Boolean verificarCamposPreenchidos = false;
+
+        String validaFieldPeso = editPeso.getText().toString();
+        String validaFieldAltura = editAltura.getText().toString();
+
+        if (validaFieldPeso.equals("")){
+            verificarCamposPreenchidos = true;
+            editPeso.setError("Preencha o campo peso");
+        }
+
+        if (validaFieldAltura.equals("")){
+            verificarCamposPreenchidos = true;
+            editAltura.setError("Preencha o campo altura");
+        }
+
+        return verificarCamposPreenchidos ;
     }
 
 }
