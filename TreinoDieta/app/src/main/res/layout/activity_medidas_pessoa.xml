@@ -299,5 +299,5 @@
             android:insetRight="8dp"
             android:text="@string/btnSalvar"/>
     </LinearLayout>
-    
+
 </android.support.constraint.ConstraintLayout>

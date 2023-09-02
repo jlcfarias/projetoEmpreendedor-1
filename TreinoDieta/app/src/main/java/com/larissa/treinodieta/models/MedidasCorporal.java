@@ -1,7 +1,5 @@
 package com.larissa.treinodieta.models;
 
-import android.widget.EditText;
-
 import java.io.Serializable;
 
 public class MedidasCorporal implements Serializable {

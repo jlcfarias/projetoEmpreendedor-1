@@ -6,7 +6,6 @@ import com.larissa.treinodieta.activities.MedidasPessoaActivity;
 import com.larissa.treinodieta.R;
 import com.larissa.treinodieta.models.MedidasCorporal;
 
-
 public class MedidasCorporalHelper {
     private final EditText antebracoE;
     private final EditText antebracoD;
