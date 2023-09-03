@@ -25,6 +25,7 @@
         <activity android:name=".activities.ContadorCaloriasActivity"/>
         <activity android:name=".activities.CalculoImcActivity"/>
         <activity android:name=".activities.MedidasPessoaActivity"/>
+        <activity android:name=".activities.HistoricoMedidasActivity"/>
     </application>
 
 </manifest>

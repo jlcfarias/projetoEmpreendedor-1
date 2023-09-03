@@ -12,6 +12,7 @@
     <string name="labelMedidasPessoa">Medidas Corporal</string>
     <string name="labelContadorCalorias">Contador de Calorias</string>
     <string name="labelCalculoImc">Cálculo IMC</string>
+    <string name="labelHistoricoMedidas">Histórico de Medidas</string>
 
     <!--Tela de medidas-->
     <string name="antebracoE">Antebraço(E):</string>
