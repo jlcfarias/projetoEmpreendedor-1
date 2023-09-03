@@ -26,6 +26,8 @@
         <activity android:name=".activities.CalculoImcActivity"/>
         <activity android:name=".activities.MedidasPessoaActivity"/>
         <activity android:name=".activities.HistoricoMedidasActivity"/>
+        <activity android:name=".activities.PesoAvalicoesActivity"/>
+        <activity android:name=".activities.OpcaoExercicioDiarioActivity"/>
     </application>
 
 </manifest>

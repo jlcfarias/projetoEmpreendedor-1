@@ -10,7 +10,7 @@
         <LinearLayout
             android:id="@+id/linearLayoutLogo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="600px"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -95,7 +95,6 @@
                 android:insetRight="8dp"
                 android:text="@string/labelMedidasPessoa" />
 
-
         </LinearLayout>
 
     <LinearLayout
@@ -121,4 +120,50 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayoutPesoAvaliacoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutHistoricoMedidas">
+
+        <Button
+            android:id="@+id/btnPesoAvaliacoes"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="8dp"
+            android:insetRight="8dp"
+            android:text="@string/labelPesoAvaliacoes" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutOpcaoExercicioDiario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPesoAvaliacoes">
+
+        <Button
+            android:id="@+id/btnOpcaoExercicioDiario"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="8dp"
+            android:insetRight="8dp"
+            android:text="@string/labelOpcaoExercicioDiario" />
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

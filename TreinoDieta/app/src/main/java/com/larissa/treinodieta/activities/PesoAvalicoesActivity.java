@@ -9,7 +9,7 @@ import android.view.MenuItem;
 
 import com.larissa.treinodieta.R;
 
-public class HistoricoMedidasActivity extends AppCompatActivity {
+public class PesoAvalicoesActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -31,8 +31,7 @@ public class HistoricoMedidasActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_historico_medidas);
-        setTitle(R.string.labelHistoricoMedidas);
+        setContentView(R.layout.activity_peso_avaliacoes);
+        setTitle(R.string.labelPesoAvaliacoes);
     }
-
 }
