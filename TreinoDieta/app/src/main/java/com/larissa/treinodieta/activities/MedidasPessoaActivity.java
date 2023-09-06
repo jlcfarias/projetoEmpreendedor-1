@@ -66,7 +66,7 @@ public class MedidasPessoaActivity extends AppCompatActivity {
 
         MedidasCorporalDao dao = new MedidasCorporalDao(this);
 
-        MedidasCorporal ultimaMedida = dao.burcarMedidasCorporal();
+        MedidasCorporal ultimaMedida = dao.buscarMedidasCorporal();
 
         if (ultimaMedida != null){
             medidasCorporalHelper.preencherCampos(ultimaMedida);
@@ -80,8 +80,8 @@ public class MedidasPessoaActivity extends AppCompatActivity {
                     Date dataAtual = Calendar.getInstance().getTime();
                     SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
                     String dataMedida = dateFormat.format(dataAtual);
-                    medidas.setData(dataMedida);
 
+                    medidas.setData(dataMedida);
                     dao.inserirMedidasCorporal(medidas);
                     dao.close();
                     Toast.makeText(getApplicationContext(), R.string.salvoSucesso , Toast.LENGTH_SHORT).show();

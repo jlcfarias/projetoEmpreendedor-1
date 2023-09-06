@@ -104,4 +104,14 @@ public class MedidasCorporal implements Serializable {
         this.peito = peito;
     }
 
+    @Override
+    public String toString() {
+        return  "Data: " + getData() + "\r\n\n" +
+                "Cintura: " + getCintura() + " cm; " +
+                "Quadril: " + getQuadril() + " cm; " +
+                "Peito: " + getPeito() + " cm \r\n" +
+                "Antebraço: (D) " + getAntebracoD() + " cm; (E) " + getAntebracoE() + " cm \r\n" +
+                "Braço: (D) " + getBracoD() + " cm; (E) " + getBracoE() + " cm \r\n" +
+                "Perna: (D) " + getPernaD() + " cm; (E) " + getPernaE() + " cm \r\n";
+    }
 }

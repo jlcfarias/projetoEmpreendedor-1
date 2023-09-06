@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.larissa.treinodieta.models.MedidasCorporal;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MedidasCorporalDao extends SQLiteOpenHelper {
 
     static final int DB_VERSION = 3;
@@ -70,7 +73,7 @@ public class MedidasCorporalDao extends SQLiteOpenHelper {
     }
 
 
-    public MedidasCorporal burcarMedidasCorporal() {
+    public MedidasCorporal buscarMedidasCorporal() {
         String banco = "SELECT * FROM MedidasCorporal WHERE id = (SELECT MAX(id) FROM MedidasCorporal);";
         SQLiteDatabase mSQLiteDatabase = getReadableDatabase();
         Cursor cursor = mSQLiteDatabase.rawQuery(banco, null);
@@ -97,6 +100,36 @@ public class MedidasCorporalDao extends SQLiteOpenHelper {
         return medidas;
     }
 
+
+
+    public List<MedidasCorporal> buscarHistoricoMedidasCorporal() {
+        String banco = "SELECT * FROM MedidasCorporal;";
+        SQLiteDatabase mSQLiteDatabase = getReadableDatabase();
+        Cursor cursor = mSQLiteDatabase.rawQuery(banco, null);
+
+        List<MedidasCorporal> medidasHistorico = new ArrayList<MedidasCorporal>();
+
+        while (cursor.moveToNext()){
+            MedidasCorporal medidas = new MedidasCorporal();
+
+            medidas.setId(cursor.getLong(cursor.getColumnIndexOrThrow("id")));
+            medidas.setData(cursor.getString(cursor.getColumnIndexOrThrow("data")));
+            medidas.setAntebracoE(cursor.getString(cursor.getColumnIndexOrThrow("antebracoE")));
+            medidas.setAntebracoD(cursor.getString(cursor.getColumnIndexOrThrow("antebracoD")));
+            medidas.setBracoE(cursor.getString(cursor.getColumnIndexOrThrow("bracoE")));
+            medidas.setBracoD(cursor.getString(cursor.getColumnIndexOrThrow("bracoD")));
+            medidas.setCintura(cursor.getString(cursor.getColumnIndexOrThrow("cintura")));
+            medidas.setQuadril(cursor.getString(cursor.getColumnIndexOrThrow("quadril")));
+            medidas.setPernaD(cursor.getString(cursor.getColumnIndexOrThrow("pernaD")));
+            medidas.setPernaE(cursor.getString(cursor.getColumnIndexOrThrow("pernaE")));
+            medidas.setPeito(cursor.getString(cursor.getColumnIndexOrThrow("peito")));
+
+            medidasHistorico.add(medidas);
+        }
+        cursor.close();
+
+        return medidasHistorico;
+    }
 
     public void deletar(MedidasCorporal medidasCorporal) {
         SQLiteDatabase mSQLiteDatabase = getWritableDatabase();
