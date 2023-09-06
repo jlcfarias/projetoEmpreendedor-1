@@ -42,8 +42,8 @@ public class MedidasCorporalDao extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         String banco = "";
         switch (oldVersion){
-            case 3:
-                banco = "DELETE FROM MedidasCorporal";
+            case 2:
+                banco = "DROP TABLE MedidasCorporal";
                 //banco = "ALTER TABLE MedidasCorporal ADD COLUMN data TEXT";
                 db.execSQL(banco);
 
