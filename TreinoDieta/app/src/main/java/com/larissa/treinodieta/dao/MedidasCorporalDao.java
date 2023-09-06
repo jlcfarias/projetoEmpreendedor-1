@@ -13,7 +13,7 @@ import java.util.List;
 
 public class MedidasCorporalDao extends SQLiteOpenHelper {
 
-    static final int DB_VERSION = 3;
+    static final int DB_VERSION = 4;
 
     public MedidasCorporalDao( Context context) {
         super(context, "MedidasCorporal", null, DB_VERSION);
@@ -42,9 +42,12 @@ public class MedidasCorporalDao extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         String banco = "";
         switch (oldVersion){
-            case 2:
-                banco = "ALTER TABLE MedidasCorporal ADD COLUMN data TEXT";
+            case 3:
+                banco = "DELETE FROM MedidasCorporal";
+                //banco = "ALTER TABLE MedidasCorporal ADD COLUMN data TEXT";
                 db.execSQL(banco);
+
+                onCreate(db);
         }
     }
 
