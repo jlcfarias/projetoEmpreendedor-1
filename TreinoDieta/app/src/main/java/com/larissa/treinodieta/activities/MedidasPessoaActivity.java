@@ -16,6 +16,11 @@ import com.larissa.treinodieta.dao.MedidasCorporalDao;
 import com.larissa.treinodieta.helpers.MedidasCorporalHelper;
 import com.larissa.treinodieta.models.MedidasCorporal;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 public class MedidasPessoaActivity extends AppCompatActivity {
 
     private MedidasCorporalHelper medidasCorporalHelper;
@@ -72,6 +77,11 @@ public class MedidasPessoaActivity extends AppCompatActivity {
             public void onClick(View view) {
                 MedidasCorporal medidas = medidasCorporalHelper.getMedidasCorporal();
                 if (!validaCamposObrigatorios()){{
+                    Date dataAtual = Calendar.getInstance().getTime();
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+                    String dataMedida = dateFormat.format(dataAtual);
+                    medidas.setData(dataMedida);
+
                     dao.inserirMedidasCorporal(medidas);
                     dao.close();
                     Toast.makeText(getApplicationContext(), R.string.salvoSucesso , Toast.LENGTH_SHORT).show();

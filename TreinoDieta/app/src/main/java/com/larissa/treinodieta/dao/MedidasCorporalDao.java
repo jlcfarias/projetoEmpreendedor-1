@@ -10,14 +10,17 @@ import com.larissa.treinodieta.models.MedidasCorporal;
 
 public class MedidasCorporalDao extends SQLiteOpenHelper {
 
+    static final int DB_VERSION = 3;
+
     public MedidasCorporalDao( Context context) {
-        super(context, "MedidasCorporal", null, 2);
+        super(context, "MedidasCorporal", null, DB_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
         String banco = "CREATE TABLE IF NOT EXISTS MedidasCorporal(id INTEGER PRIMARY KEY," +
+                " data TEXT, " +
                 " antebracoE TEXT," +
                 " antebracoD TEXT," +
                 " bracoE TEXT," +
@@ -36,8 +39,8 @@ public class MedidasCorporalDao extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         String banco = "";
         switch (oldVersion){
-            case 1:
-                banco = "ALTER TABLE MedidasCorporal ADD COLUMN peito TEXT";
+            case 2:
+                banco = "ALTER TABLE MedidasCorporal ADD COLUMN data TEXT";
                 db.execSQL(banco);
         }
     }
@@ -46,6 +49,7 @@ public class MedidasCorporalDao extends SQLiteOpenHelper {
 
         ContentValues dados = new ContentValues();
 
+        dados.put("data", medidasCorporal.getData());
         dados.put("antebracoE", medidasCorporal.getAntebracoE());
         dados.put("antebracoD", medidasCorporal.getAntebracoD());
         dados.put("bracoE", medidasCorporal.getBracoE());
@@ -76,6 +80,7 @@ public class MedidasCorporalDao extends SQLiteOpenHelper {
         while (cursor.moveToNext()){
 
             medidas.setId(cursor.getLong(cursor.getColumnIndexOrThrow("id")));
+            medidas.setData(cursor.getString(cursor.getColumnIndexOrThrow("data")));
             medidas.setAntebracoE(cursor.getString(cursor.getColumnIndexOrThrow("antebracoE")));
             medidas.setAntebracoD(cursor.getString(cursor.getColumnIndexOrThrow("antebracoD")));
             medidas.setBracoE(cursor.getString(cursor.getColumnIndexOrThrow("bracoE")));

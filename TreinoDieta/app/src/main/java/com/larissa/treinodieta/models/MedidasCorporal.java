@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class MedidasCorporal implements Serializable {
 
     private Long id;
+    private String data;
     private String antebracoD;
     private String antebracoE;
     private String bracoE;
@@ -21,6 +22,14 @@ public class MedidasCorporal implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 
     public String getAntebracoD() {
